@@ -1,6 +1,6 @@
-var app = angular.module('app', ['ngRoute']);
+var carlosapp = angular.module('carlos.app', ['ngRoute']);
 
-app.config(function($routeProvider, $locationProvider) {
+carlosapp.config(function($routeProvider, $locationProvider) {
 	
 	$routeProvider
 
@@ -8,20 +8,9 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'viewer/inicial.html'
 	})
 
-	.when('/registrar', {
-		templateUrl: 'views/SignUpView.html',
+	.when('/login', {
+		templateUrl: 'viewer/Login.html',
 		controller: 'SignUpCtrl'
 	});
 
 })
-
-.directive('starRating', function() {
-	return {
-		retrict: 'E',
-		link: function(scope, elem, attrs){
-			$(elem).rating({ size: 'lg', language: 'pt-BR', readonly: true});
-			$(elem).rating('update', attrs.bookValue);
-		}
-	}
-})
-
