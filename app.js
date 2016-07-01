@@ -5,10 +5,10 @@ app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
 
 	.when('/', {
-		templateUrl: 'views/inicial.html'
+		templateUrl: 'viewer/inicial.html'
 	})
 
-	.when('/signup', {
+	.when('/registrar', {
 		templateUrl: 'views/SignUpView.html',
 		controller: 'SignUpCtrl'
 	});
